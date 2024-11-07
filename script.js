@@ -1,3 +1,7 @@
+let humanScore = 0;
+let computerScore = 0;
+
+
 function getComputerChoice() {
     const randomNum = Math.random() * 3;
 
@@ -23,3 +27,47 @@ function getHumanChoice() {
     return getHumanChoice();
 }
 
+function playRound (comChoice, humanChoice) {
+    switch (comChoice) {
+        case "rock":
+        if (humanChoice === "paper") {
+            humanScore++;
+            alert("You win! Paper beats Rock!");
+        } else if (humanChoice === "scissors") {
+            computerScore++;
+            alert("You lose! Rock beats Scissors!");
+        }
+        else
+            alert("Draw! You both chose Rock!")
+        break;
+        case "paper":
+        if (humanChoice === "scissors") {
+            humanScore++;
+            alert("You win! Scissors beats Paper!");
+        } else if (humanChoice === "rock") {
+            computerScore++;
+            alert("You lose! Paper beats Rock!");
+        }
+        else
+            alert("Draw! You both chose Paper!")
+        break;
+        case "scissors":
+        if (humanChoice === "rock") {
+            humanScore++;
+            alert("You win! Rock beats Scissors!");
+        } else if (humanChoice === "paper") {
+            computerScore++;
+            alert("You lose! Scissors beats Paper!");
+        }
+        else
+            alert("Draw! You both chose Scissors!")
+        break;
+    }
+}
+
+const humanSelection = getHumanChoice();
+const compSelection = getComputerChoice();
+
+playRound(compSelection, humanSelection);
+console.log("Human Score: " + humanScore)
+console.log("Computer Score: " + computerScore)
