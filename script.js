@@ -65,9 +65,23 @@ function playRound (comChoice, humanChoice) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const compSelection = getComputerChoice();
+function playGame () {
 
-playRound(compSelection, humanSelection);
-console.log("Human Score: " + humanScore)
+    let humanSelection;
+    let compSelection;
+
+    for (let c = 0; c < 5; c++) {
+        humanSelection = getHumanChoice();
+        compSelection = getComputerChoice();
+        playRound(compSelection, humanSelection);
+    }
+
+    if (humanScore > computerScore)
+        console.log("Congratulations, you win!")
+    else
+        console.log("You lost! Better luck next time.")
+}
+
+playGame();
+console.log("Your Score: " + humanScore)
 console.log("Computer Score: " + computerScore)
