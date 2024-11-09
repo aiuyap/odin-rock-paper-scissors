@@ -82,6 +82,6 @@ function playGame () {
         console.log("You lost! Better luck next time.")
 }
 
-playGame();
+// playGame();
 console.log("Your Score: " + humanScore)
 console.log("Computer Score: " + computerScore)
