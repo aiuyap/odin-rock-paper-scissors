@@ -14,7 +14,7 @@ body {
     background-color: #153448;
 }
 
-#header, #scoreboard, #choices{
+#header, #scoreboard, #choices, #results{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,13 +27,22 @@ body {
 
 #scoreboard {
     height: 50px;
-    gap: 20px;
+    gap: 120px;
 }
 
 #choices {
     height: 200px;
     justify-content: center;
     gap: 50px;
+}
+
+#results {
+    gap: 30px;
+}
+
+#result-message {
+    width: 500px;
+    text-align: center;
 }
 
 button {
