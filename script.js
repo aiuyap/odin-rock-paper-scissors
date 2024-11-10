@@ -1,6 +1,27 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const rockButton = document.querySelector("#rock");
+rockButton.addEventListener("click", () => {
+    const compSelection = getComputerChoice();
+    const humanSelection = "rock";
+    playRound(compSelection, humanSelection);
+});
+
+const paperButton = document.querySelector("#paper");
+paperButton.addEventListener("click", () => {
+    const compSelection = getComputerChoice();
+    const humanSelection = "paper";
+    playRound(compSelection, humanSelection);
+});
+
+const scissorsButton = document.querySelector("#scissors");
+scissorsButton.addEventListener("click", () => {
+    const compSelection = getComputerChoice();
+    const humanSelection = "scissors";
+    playRound(compSelection, humanSelection);
+});
+
 
 function getComputerChoice() {
     const randomNum = Math.random() * 3;
